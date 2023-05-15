@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.smallContainer {
+  border-bottom: 2px solid rgb(255, 255, 255);
+  gap: 10px;
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: large;
+}
+
+.card {
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+li {
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}

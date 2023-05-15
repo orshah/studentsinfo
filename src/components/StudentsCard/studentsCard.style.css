@@ -2,14 +2,16 @@
   background-color: rgba(35, 151, 246, 0.626);
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 350px;
   align-items: center;
 }
 
 img {
-  width: 300px;
+  width: 110px;
+  height: 110px;
   /* height: 150px; */
-  border-radius: 200px;
+  border-radius: 30rem;
+  margin-left: 10px;
 }
 
 button {
@@ -23,9 +25,9 @@ li {
   list-style-type: none;
 }
 
-.container {
+/* .container {
   display: flex;
-  gap: 3rem;
+  gap: 1rem;
   flex-wrap: wrap;
   width: 100%;
-}
+} */

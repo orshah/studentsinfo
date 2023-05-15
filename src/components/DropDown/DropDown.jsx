@@ -1,46 +1,102 @@
 import "./dropDown.style.css";
 import React, { useState } from "react";
-import DropData from "./DropData";
+import dogImg from "../images/Dog.jpg";
+
+const DropData = [
+  {
+    id: 1,
+    name: "Tomas",
+    email: "tomas@gmail.com",
+    lifemotto: "What you choose to focus on becomes your reality. ",
+    image: dogImg,
+    button: "Contact",
+  },
+  {
+    id: 2,
+    name: "Murat",
+    email: "murat@gmail.com",
+    lifemotto: "Nothing will make you feel better except doing the work.",
+    image: dogImg,
+    button: "Contact",
+  },
+  {
+    id: 3,
+    name: "Aidina",
+    email: "aidina@gmail.com",
+    lifemotto:
+      "If you love something, set it free. If it comes back, it's yours. If it doesn't, it never was.",
+    image: dogImg,
+    button: "Contact",
+  },
+  {
+    id: 4,
+    name: "Alina",
+    email: "alina@gmail.com",
+    lifemotto: "Always believe that something wonderful is about to happen.",
+    image: dogImg,
+    button: "Contact",
+  },
+  {
+    id: 5,
+    name: "Tink",
+    email: "Tink@gmail.com",
+    lifemotto: "Sometimes you win, sometimes you learn.",
+    image: dogImg,
+    button: "Contact",
+  },
+  {
+    id: 6,
+    name: "Esma",
+    email: "Esma@gmail.com",
+    lifemotto: "Eat healthy, sleep well, breathe deeply, enjoy life.",
+    image: dogImg,
+    button: "Contact",
+  },
+  {
+    id: 7,
+    name: "Shahzod",
+    email: "shahzod@gmail.com",
+    lifemotto: "Life doesn't have to be perfect to be wonderful.",
+    image: dogImg,
+    button: "Contact",
+  },
+  {
+    id: 8,
+    name: "Elnura",
+    email: "elnura@gmail.com",
+    lifemotto:
+      "If you can't stop thinking about it, don't stop working for it.",
+    image: dogImg,
+    button: "Contact",
+  },
+];
 
 const DropDown = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(null);
 
   const toggling = () => setIsOpen(!isOpen);
-
-  const onOptionClicked = (value) => () => {
-    setSelectedOption(value);
-    setIsOpen(false);
-    console.log(selectedOption);
-  };
 
   return (
     <>
       <div className="container">
-        {DropData.map((el, id) => {
-          return (
-            <div key={id} className="card">
-              <h1 onClick={toggling}>{selectedOption || "Select Drop Down"}</h1>
-              {options.map((option) => (
-                <div
-                  className="dropContainer"
-                  onClick={onOptionClicked(option)}
-                  key={Math.random()}
-                >
-                  {option}
+        <div className="card">
+          <h1 onClick={toggling}>Click here</h1>
+          {isOpen && (
+            <div className="dropContainer">
+              {DropData.map((el) => (
+                <div className="smallContainer" key={el.id}>
+                  <img src={el.image} alt="" />
+                  <ul>
+                    <li>Name: {el.name}</li>
+                    <li>Email: {el.email}</li>
+                    <li>Motto: {el.lifemotto}</li>
+                  </ul>
+                  {/* <button>{el.button}</button> */}
                 </div>
               ))}
-              <img src={el.image} alt=""></img>
-              <ul>
-                <li>Name: {el.name}</li>
-                <li>Email: {el.email}</li>
-                <li>Motto: {el.lifemotto}</li>
-              </ul>
-              <button>{el.button}</button>
-              );
             </div>
-          );
-        })}
+          )}
+        </div>
       </div>
     </>
   );
