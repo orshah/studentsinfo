@@ -5,8 +5,8 @@ import dogImg from "../images/Dog.jpg";
 const DropData = [
   {
     id: 1,
-    name: "Tomas",
-    email: "tomas@gmail.com",
+    name: "Tomasz",
+    email: "tomasz@gmail.com",
     lifemotto: "What you choose to focus on becomes your reality. ",
     image: dogImg,
     button: "Contact",
@@ -23,8 +23,7 @@ const DropData = [
     id: 3,
     name: "Aidina",
     email: "aidina@gmail.com",
-    lifemotto:
-      "If you love something, set it free. If it comes back, it's yours. If it doesn't, it never was.",
+    lifemotto: "Always find a reason to laugh.",
     image: dogImg,
     button: "Contact",
   },
@@ -91,7 +90,6 @@ const DropDown = () => {
                     <li>Email: {el.email}</li>
                     <li>Motto: {el.lifemotto}</li>
                   </ul>
-                  {/* <button>{el.button}</button> */}
                 </div>
               ))}
             </div>
