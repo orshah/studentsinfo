@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <br />
-      {/* <StudentsCard /> */}
+      <StudentsCard />
       <br />
       <DropDown />
     </>
