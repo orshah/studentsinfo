@@ -78,8 +78,8 @@ const DropDown = () => {
   return (
     <>
       <div className="container">
-        <div className="card">
-          <h1 onClick={toggling}>Click here</h1>
+        <div className="card" onClick={toggling}>
+          <h1>Click here</h1>
           {isOpen && (
             <div className="dropContainer">
               {DropData.map((el) => (
